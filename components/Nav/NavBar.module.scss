@@ -1,12 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Source+Sans+Pro:wght@400;700;900&display=swap");
 .container {
   .NavContent {
-    background-color: #111115;
     height: 75px;
     width: 100%;
-  }
-  .panel {
-    height: 45px;
+    position: relative;
+    z-index: 2;
+    font-size: 17px;
+    background-color: #282a35;
+    color: #f1f1f1;
     width: 100%;
-    background-color: white;
+    padding: 0;
+    letter-spacing: 1px;
+    font-family: "Source Sans Pro", sans-serif;
   }
 }

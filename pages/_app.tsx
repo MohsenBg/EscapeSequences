@@ -31,7 +31,9 @@ function MyApp({ Component, pageProps }: AppProps) {
                   !menuOpen ? styles.C_SidLeftMobile : {}
                 }`}
               >
-                <SidLeft />
+                <div className={styles.sid}>
+                  <SidLeft />
+                </div>
               </div>
               <div className={styles.C_EscapeSequences}>
                 <Component {...pageProps} />
