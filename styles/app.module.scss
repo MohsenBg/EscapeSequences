@@ -1,0 +1,68 @@
+.Nav {
+  width: 100%;
+  background-color: orange;
+  height: 75px;
+}
+.app {
+  position: relative;
+  width: 100%;
+  .panel {
+    z-index: 5;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    width: 100%;
+    background-color: #ffffff;
+    height: 45px;
+  }
+  .flex {
+    height: 100%;
+    display: flex;
+    .C_SidLeft {
+      top: 45px;
+      position: -webkit-sticky;
+      position: sticky;
+      height: calc(100vh - 45px);
+      display: none;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #bbbaba;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      @media (width > 974px) {
+        display: unset;
+        width: 20%;
+      }
+      @media (width < 975px) {
+        position: sticky;
+        display: unset;
+      }
+    }
+    .C_SidLeftMobile {
+      @media (width < 975px) {
+        display: none;
+      }
+    }
+    .C_EscapeSequences {
+      width: 100%;
+      height: 200vh;
+      @media (width > 975px) {
+        width: 80%;
+      }
+    }
+  }
+}

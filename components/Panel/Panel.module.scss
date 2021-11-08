@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+.container {
+  position: relative;
+  width: 100%;
+  color: black;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  .menu {
+    margin-top: 3px;
+    font-size: 30px;
+    cursor: pointer;
+    @media (width > 975px) {
+      display: none;
+    }
+  }
+  .title {
+    color: rgb(49, 124, 99);
+    font-size: 20px;
+    font-family: "Mochiy Pop P One", sans-serif;
+    width: 100%;
+    text-align: center;
+  }
+  .right {
+    font-family: "Righteous", cursive;
+    right: 10px;
+    position: absolute;
+    font-size: 25px;
+  }
+}

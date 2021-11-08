@@ -1,0 +1,22 @@
+.container {
+  overflow: hidden;
+  background-color: rgb(33, 33, 33);
+  .mainContent {
+    .options {
+      margin-top: 0.5em;
+      .option {
+        display: flex;
+        margin: 1em 0;
+        padding: 1em;
+        &:hover {
+          cursor: pointer;
+          background-color: rgba(240, 248, 255, 0.185);
+        }
+        .Icons {
+          font-size: 20px;
+          margin-right: 1em;
+        }
+      }
+    }
+  }
+}
