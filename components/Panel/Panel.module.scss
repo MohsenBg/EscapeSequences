@@ -3,7 +3,6 @@
 .container {
   position: relative;
   width: 100%;
-  color: black;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
   height: 100%;
   background-color: white;
@@ -14,9 +13,13 @@
   align-items: center;
   padding: 10px;
   .menu {
+    color: rgb(0, 132, 255);
     margin-top: 3px;
     font-size: 30px;
     cursor: pointer;
+    &:hover {
+      color: aqua;
+    }
     @media (width > 975px) {
       display: none;
     }
@@ -27,6 +30,9 @@
     font-family: "Mochiy Pop P One", sans-serif;
     width: 100%;
     text-align: center;
+    @media (width < 975px) {
+      font-size: 18px;
+    }
   }
   .right {
     font-family: "Righteous", cursive;

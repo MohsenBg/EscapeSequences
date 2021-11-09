@@ -32,6 +32,7 @@ a {
   color: #09ff09;
 }
 .ioStream,
+.return,
 .std {
   color: #74e2e6;
 }
@@ -45,5 +46,10 @@ a {
   color: orange;
 }
 .EscapeSequence {
-  color: rgba(255, 208, 0, 0.897);
+  font-size: 20px;
+  font-weight: 900;
+  color: rgba(195, 0, 255, 0.897);
+}
+.number {
+  color: rgb(215, 16, 241);
 }

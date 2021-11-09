@@ -37,7 +37,9 @@ const Panel = ({ menu }: any) => {
       <div className={styles.menu} onClick={menu}>
         <RiMenu4Line />
       </div>
-      <div className={styles.title}>{title}</div>
+      <div className={styles.title}>
+        <span>{title}</span>
+      </div>
       <div className={styles.right}>C++</div>
     </div>
   );

@@ -11,51 +11,67 @@ import NewLine from "../../components/EscapeSequences/NewLine/NewLine";
 import QuestionMark from "../../components/EscapeSequences/QuestionMark/QuestionMark";
 import SingleQuotation from "../../components/EscapeSequences/SingleQuotation/SingleQuotation";
 import VerticalTab from "../../components/EscapeSequences/VerticalTab/VerticalTab";
+import Head from "next/head";
+import FormFeed from "../../components/EscapeSequences/FormFeed/FormFeed";
+
 const Doc = ({ doc }: any) => {
+  const selected = NavItem.filter((item) => doc === item.Link);
   return (
-    <div>
-      {doc.toLowerCase() === slug.ALERT ? (
-        <div>
-          <Alert />
-        </div>
-      ) : doc.toLowerCase() === slug.BACKSLASH ? (
-        <div>
-          <Backslash />
-        </div>
-      ) : doc.toLowerCase() === slug.BACKSPACE ? (
-        <div>
-          <Backspace />
-        </div>
-      ) : doc.toLowerCase() === slug.CARRIAGE_RETURN ? (
-        <div>
-          <CarriageReturn />
-        </div>
-      ) : doc.toLowerCase() === slug.DOUBLE_QUOTATION ? (
-        <div>
-          <DoubleQuotation />
-        </div>
-      ) : doc.toLowerCase() === slug.HORIZONTAL_TAB ? (
-        <div>
-          <HorizontalTab />
-        </div>
-      ) : doc.toLowerCase() === slug.NEW_LINE ? (
-        <div>
-          <NewLine />
-        </div>
-      ) : doc.toLowerCase() === slug.QUESTION_MARK ? (
-        <div>
-          <QuestionMark />
-        </div>
-      ) : doc.toLowerCase() === slug.SINGLE_QUOTATION ? (
-        <div>
-          <SingleQuotation />
-        </div>
-      ) : doc.toLowerCase() === slug.VERTICAL_TAB ? (
-        <div>
-          <VerticalTab />
-        </div>
-      ) : null}
-    </div>
+    <>
+      <Head>
+        <title>{selected[0].Name}</title>
+        <meta charSet="UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <div>
+        {doc === slug.ALERT ? (
+          <div>
+            <Alert />
+          </div>
+        ) : doc === slug.BACKSLASH ? (
+          <div>
+            <Backslash />
+          </div>
+        ) : doc === slug.BACKSPACE ? (
+          <div>
+            <Backspace />
+          </div>
+        ) : doc === slug.CARRIAGE_RETURN ? (
+          <div>
+            <CarriageReturn />
+          </div>
+        ) : doc === slug.DOUBLE_QUOTATION ? (
+          <div>
+            <DoubleQuotation />
+          </div>
+        ) : doc === slug.HORIZONTAL_TAB ? (
+          <div>
+            <HorizontalTab />
+          </div>
+        ) : doc === slug.NEW_LINE ? (
+          <div>
+            <NewLine />
+          </div>
+        ) : doc === slug.QUESTION_MARK ? (
+          <div>
+            <QuestionMark />
+          </div>
+        ) : doc === slug.SINGLE_QUOTATION ? (
+          <div>
+            <SingleQuotation />
+          </div>
+        ) : doc === slug.FROM_FEED ? (
+          <div>
+            <FormFeed />
+          </div>
+        ) : doc === slug.VERTICAL_TAB ? (
+          <div>
+            <VerticalTab />
+          </div>
+        ) : null}
+      </div>
+    </>
   );
 };
 

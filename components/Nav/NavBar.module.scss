@@ -12,5 +12,28 @@
     padding: 0;
     letter-spacing: 1px;
     font-family: "Source Sans Pro", sans-serif;
+    display: flex;
+    align-items: center;
+    .Name {
+      @media (width > 974px) {
+        font-size: 18px;
+        left: 20px;
+      }
+      @media (width < 975px) {
+        display: none;
+      }
+      font-weight: 700;
+      position: absolute;
+      margin-top: 5px;
+
+      cursor: pointer;
+    }
+    .title {
+      width: 100%;
+      text-align: center;
+      @media (width < 975px) {
+        font-size: 15px;
+      }
+    }
   }
 }
