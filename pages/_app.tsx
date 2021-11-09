@@ -7,17 +7,28 @@ import NavBar from "../components/Nav/NavBar";
 import Panel from "../components/Panel/Panel";
 import { Provider } from "react-redux";
 import { store } from "../redux/store";
+import Massage from "../components/massage/Massage";
 function MyApp({ Component, pageProps }: AppProps) {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const [MassageOpen, setMassageOpen] = useState(true);
   const menuHandel = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handelCloseMassage = () => {
+    setMassageOpen(false);
   };
 
   return (
     <>
       <Provider store={store}>
         <div className="main">
+          {MassageOpen ? (
+            <div className={styles.Massage}>
+              <Massage close={handelCloseMassage} />
+            </div>
+          ) : null}
+
           <div className={styles.Nav}>
             <NavBar />
           </div>
